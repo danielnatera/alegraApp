@@ -2,8 +2,8 @@
   <div>
     <ImagesNavbar />
     <SuccessMessage :visible="showMessage" />
-    <main class="main">
-      <div class="search-container">
+    <main class="main d-flex justify-content-center align-items-center">
+      <div class="search-container d-flex align-items-center flex-column">
         <h1 class="title">Busca las <span>mejores</span> imágenes</h1>
         <h4>¡Ingresa una palabra y escoge tu imagen favorita!</h4>
         <div class="position-relative">
@@ -244,17 +244,11 @@ html {
   font-family: "Urbanist", sans-serif !important;
 }
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 4vh;
 }
 
 .search-container {
   width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .images-container {
