@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app-container">
     <ImagesNavbar />
     <SuccessMessage :visible="showMessage" />
     <main class="main d-flex justify-content-center align-items-center">
@@ -240,6 +240,13 @@ export default {
 <style>
 #app {
   width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body,
@@ -253,8 +260,10 @@ html {
   font-weight: 400;
 }
 .main {
-  margin-top: 4vh;
-  height: 90vh;
+  height: 100%;
+  flex-grow: 1;
+  overflow: auto;
+  padding-top: 66px;
 }
 
 .search-container {
