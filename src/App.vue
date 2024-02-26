@@ -12,7 +12,6 @@
             v-model="searchQuery"
             @keyup.enter="fetchImages"
             placeholder="Ingresa una palabra"
-            style="padding-left: 50px"
           />
           <img
             src="@/assets/lens.svg"
@@ -109,8 +108,8 @@ export default {
     async fetchImages() {
       this.selectedImageIndex = null;
       this.buttonsDisabled = false;
-      const apiKey = "AIzaSyBC6-_FXqZ4a7sLCf90GQ-rxSCC5gtfucw";
-      const cx = "536f3071948d64ec4";
+      const apiKey = process.env.VUE_APP_API_KEY;
+      const cx = process.env.VUE_APP_CX;
       const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&searchType=image&q=${this.searchQuery}`;
 
       try {
@@ -236,6 +235,10 @@ export default {
 </script>
 
 <style>
+#app {
+  width: 100%;
+}
+
 body,
 html {
   font-family: "Urbanist", sans-serif !important;
@@ -272,7 +275,7 @@ html {
 input[type="text"] {
   margin-top: 80px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 50px;
   width: 300px;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -454,6 +457,61 @@ button:hover {
 @media (max-width: 1300px) {
   .main {
     flex-direction: column;
+  }
+  .result-image {
+    height: 80px;
+    border-radius: 5px;
+  }
+  .images-container {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .search-container {
+    width: 80%;
+    align-items: baseline;
+  }
+  .alegra-ico {
+    margin-left: 20px;
+  }
+  .images-container {
+    margin-top: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .result-image {
+    height: 80px;
+    border-radius: 5px;
+  }
+  .bill-ico {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 300px) {
+  #app {
+    width: 100vw;
+  }
+  .search-container {
+    width: 80%;
+  }
+  input {
+    width: 230px !important;
+  }
+  .alegra-ico {
+    margin-left: 20px;
+  }
+  .images-container {
+    margin-top: 20px;
+    margin-left: 0px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .result-image {
+    height: 80px;
+    border-radius: 5px;
+  }
+  .bill-ico {
+    width: 30px;
+    height: 30px;
   }
 }
 </style>

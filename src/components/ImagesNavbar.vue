@@ -35,4 +35,9 @@ export default {
 .alegra-ico {
   margin-left: 80px;
 }
+@media (max-width: 300px) {
+  .navbar-brand {
+    font-size: 20px !important;
+  }
+}
 </style>
