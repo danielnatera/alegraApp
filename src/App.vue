@@ -479,8 +479,22 @@ button:hover {
   .images-container {
     margin-top: 20px;
   }
+  .lens-icon {
+    top: 104px;
+    left: 16px;
+  }
 }
 @media (max-width: 600px) {
+  .main {
+    flex-grow: 0;
+  }
+  input[type="text"] {
+    margin-top: 40px;
+  }
+  .lens-icon {
+    top: 64px;
+    left: 16px;
+  }
   .search-container {
     width: 80%;
     align-items: baseline;
