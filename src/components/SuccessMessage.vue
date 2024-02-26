@@ -34,5 +34,13 @@ export default {
   border-radius: 12px;
   color: #fff5ea;
   box-shadow: 0px 16px 24px 0px rgba(123, 97, 255, 0.15);
+  z-index: 99;
+}
+
+@media (max-width: 700px) {
+  .success-message {
+    left: 25%;
+    top: 90% !important;
+  }
 }
 </style>
