@@ -6,6 +6,9 @@
       <div class="search-container d-flex align-items-center flex-column">
         <h1 class="title">Busca las <span>mejores</span> imágenes</h1>
         <h4>¡Ingresa una palabra y escoge tu imagen favorita!</h4>
+        <p class="infoText">
+          Una vez selecciones tu imagen favorita haz una nueva búsqueda
+        </p>
         <div class="position-relative">
           <input
             type="text"
@@ -242,6 +245,12 @@ export default {
 body,
 html {
   font-family: "Urbanist", sans-serif !important;
+}
+
+.infoText {
+  color: #909090;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
 }
 .main {
   margin-top: 4vh;
