@@ -23,7 +23,6 @@ export default {
   background-color: rgb(0, 177, 157);
   color: white;
   padding: 10px 20px;
-  height: 46px;
 }
 
 .navbar-brand {
