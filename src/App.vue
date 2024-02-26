@@ -254,6 +254,7 @@ html {
 }
 .main {
   margin-top: 4vh;
+  height: 90vh;
 }
 
 .search-container {
@@ -460,6 +461,7 @@ button:hover {
 @media (max-width: 1300px) {
   .main {
     flex-direction: column;
+    height: 100%;
   }
   .result-image {
     height: 80px;
